@@ -2,8 +2,10 @@ package com.project.stepdefinition;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assume.assumeTrue;
 
 import java.time.Duration;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -31,7 +33,6 @@ public class StepDefinition_01 {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		driver.get("http://adactinhotelapp.com/");
-
 	}
 
 	@Given("verify whether loaded page is correct or not")
@@ -49,107 +50,73 @@ public class StepDefinition_01 {
 			if (flag) {
 
 				assertTrue(flag);
-				System.out.println("Page Not Loads");
-			} else {
-				assertFalse(flag);
 				System.out.println("Page Loads");
+			} else {
+
+				System.out.println("Page Not moved to login page");
 			}
 
 		}
-
 	}
 
-	@When("As user give invalid user and valid password")
-	public void as_user_give_invalid_user_and_valid_password() {
-		// Write code here that turns the phrase above into concrete actions
+	@When("As user give invalid {string} and valid {string}")
+	public void as_user_give_invalid_and_valid(String string, String string2) {
 		username = driver.findElement(By.id("username"));
-		username.sendKeys("manojwrong");
+		username.sendKeys(string);
 		password = driver.findElement(By.id("password"));
-		password.sendKeys("Manoj506!");
+		password.sendKeys(string2);
 		String textname = username.getText();
 		String textpass = password.getText();
 	}
 
 	@When("Click the login botton")
 	public void click_the_login_botton() {
-
 		WebElement logBtn = driver.findElement(By.xpath("//*[contains(@value,'Login')]"));
 		logBtn.click();
-	}
-
-	@Then("Check the whether it redirected to loginpage or not")
-	public void check_the_whether_it_redirected_to_loginpage_or_not() {
-
-		System.out.println("present");
-		try {
-			WebElement warnText = driver.findElement(
-					By.xpath("//*[contains(text(),'Invalid Login details or Your Password might have expired. ')]"));
-			if (warnText.isDisplayed()) {
-				assertTrue("warn text is showing ", true);
-			}
-		} catch (Exception e) {
-
-			System.out.println("Warning text is not showing");
-
-		}
-
-		/*
-		 * try { logWarn =
-		 * driver.findElement(By.xpath("//*[contains(text(),'Invalid Login details ')]")
-		 * ); } catch (NullPointerException e) { e.getStackTrace(); if
-		 * (logWarn.isDisplayed()) { System.out.println("invalid login credentials"); }
-		 * else { System.out.println("valid login credentials"); } }
-		 */
-
 	}
 
 	@Then("Verify Warning text is present or not")
 	public void verify_warning_text_is_present_or_not() {
 
-		System.out.println("adasd");
+		try {
+			String curTittle = driver.getTitle();
 
-		/*
-		 * try { logWarn =
-		 * driver.findElement(By.xpath("//*[contains(text(),'Invalid Login details ')]")
-		 * ); if (logWarn.isDisplayed()) {
-		 * System.out.println("Given login credentials are not corrent "); }else {
-		 * System.out.println("Given login  "); } } catch (Exception e) {
-		 * 
-		 * System.out.println("manjo");
-		 * 
-		 * }finally { String loginTittle = driver.getTitle(); String loginUrl =
-		 * driver.getCurrentUrl(); if ((loginTittle == "Adactin.com - Search Hotel") &&
-		 * loginUrl == "http://adactinhotelapp.com/SearchHotel.php") {
-		 * System.out.println("Given login credentials are corrent "); } else {
-		 * System.out.println("some error"); } }
-		 */
+			if (curTittle.contains("Adactin.com - Search Hotel")) {
+				assumeTrue("valid login credentials", true);
+				System.out.println("valid login credentials ");
 
+			} else if (curTittle.contains("Hotel Reservation System")) {
+				driver.findElement(By
+						.xpath("//*[contains(text(),'Invalid Login details or Your Password might have expired. ')]"));
+				System.out.println(" Invalid login credentials");
+			} else {
+
+				System.out.println("Page not found");
+
+			}
+		} catch (Exception e) {
+			System.out.println("exception occur");
+
+		}
 	}
 
-	// Scenario: Validating with blank username and black password
-	@When("As user give blank user and blank password")
-	public void as_user_give_blank_user_and_blank_password() {
-		username = driver.findElement(By.id("username"));
-		username.sendKeys("");
-		password = driver.findElement(By.id("password"));
-		password.sendKeys("");
+	@Then("Check the whether it redirected to loginpage or not")
+	public void check_the_whether_it_redirected_to_loginpage_or_not() {
 
-	}
+		String curTittle = driver.getTitle();
+		String curUrl = driver.getCurrentUrl();
 
-	// Scenario: Validating with valid username-->manojkumar506 and valid
-	// password-->Password
-	@When("As user give valid user and valid password")
-	public void as_user_give_valid_user_and_valid_password() {
-		username = driver.findElement(By.id("username"));
-		username.sendKeys("manojkumar506");
-		password = driver.findElement(By.id("password"));
-		password.sendKeys("Password");
+		if ((curTittle == "Adactin.com - Search Hotel") && (curUrl.contains("SearchHotel.php"))) {
+			assumeTrue("login into hotel search page ", true);
+		} else if (curTittle.contains("Hotel Reservation System") && (curUrl == "http://adactinhotelapp.com/")) {
+			System.out.println("erw");
+		}
+
 	}
 
 	@Then("close the webpage")
 	public void close_the_webpage() {
-		// Write code here that turns the phrase above into concrete actions
-		driver.close();
+		driver.quit();
 	}
 
 }
