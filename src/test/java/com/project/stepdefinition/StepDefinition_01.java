@@ -106,10 +106,11 @@ public class StepDefinition_01 {
 		String curTittle = driver.getTitle();
 		String curUrl = driver.getCurrentUrl();
 
-		if ((curTittle == "Adactin.com - Search Hotel") && (curUrl.contains("SearchHotel.php"))) {
-			assumeTrue("login into hotel search page ", true);
-		} else if (curTittle.contains("Hotel Reservation System") && (curUrl == "http://adactinhotelapp.com/")) {
-			System.out.println("erw");
+		if ((curTittle.contains("Adactin.com - Search Hotel")) && (curUrl.contains("SearchHotel.php"))) {
+			System.out.print("In Hotel search page ");
+		} else if ((curTittle.contains("Hotel Reservation System"))
+				&& (curUrl.contains("http://adactinhotelapp.com/"))) {
+			System.out.print("In login page ");
 		}
 
 	}
