@@ -16,7 +16,7 @@
 			<plugin>
 				<groupId>net.masterthought</groupId>
 				<artifactId>maven-cucumber-reporting</artifactId>
-				<version>5.7.1</version>
+				<version>5.7.0</version>
 				<executions>
 					<execution>
 						<id>execution</id>
@@ -31,7 +31,8 @@
 							<!-- output directory for the generated report -->
 							<outputDirectory>${project.build.directory}/target/site</outputDirectory>
 							<!-- optional, defaults to outputDirectory if not specified -->
-							<inputDirectory>${project.build.directory}/target/cucumber</inputDirectory>
+							<inputDirectory>${project.build.directory}target/cucumber</inputDirectory>
+							<cucumberoutput>${project.build.directory}/target/cucumber/cucumber.json</cucumberoutput>
 							<jsonFiles>
 								<!-- supports wildcard or name pattern -->
 								<param>**/*.json</param>
