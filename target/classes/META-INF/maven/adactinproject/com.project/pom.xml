@@ -29,9 +29,9 @@
                             <!-- optional, per documentation set this to "true" to bypass generation of Cucumber Reports entirely, defaults to false if not specified -->
                             <skip>false</skip>
                             <!-- output directory for the generated report -->
-                            <outputDirectory>${project.build.directory}/target/cucumber-reports</outputDirectory>
+                            <outputDirectory>${project.build.directory}target/site</outputDirectory>
                             <!-- optional, defaults to outputDirectory if not specified -->
-                            <inputDirectory>${project.build.directory}/jsonReports</inputDirectory>
+                            <inputDirectory>${project.build.directory}target/cucumber</inputDirectory>
                             <jsonFiles>
                                 <!-- supports wildcard or name pattern -->
                                 <param>**/*.json</param>
