@@ -1,23 +1,25 @@
 package com.project.stepdefinition;
 
-import static org.junit.Assert.assertFalse;
+
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assume.assumeTrue;
 
 import java.time.Duration;
-import java.util.NoSuchElementException;
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.project.BaseClassDef;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class StepDefinition_01 {
+public class StepDefinition_01 extends BaseClassDef {
 
 	WebDriver driver; // instance variable declare
 	WebElement username;// login page -->username
@@ -27,8 +29,7 @@ public class StepDefinition_01 {
 	@Given("Open the chrome as login page")
 	public void open_the_chrome_as_login_page() {
 		// Pre-requirement config
-
-		WebDriverManager.chromiumdriver().setup();
+		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
@@ -65,8 +66,7 @@ public class StepDefinition_01 {
 		username.sendKeys(string);
 		password = driver.findElement(By.id("password"));
 		password.sendKeys(string2);
-		String textname = username.getText();
-		String textpass = password.getText();
+		
 	}
 
 	@When("Click the login botton")
@@ -113,6 +113,15 @@ public class StepDefinition_01 {
 			System.out.print("In login page ");
 		}
 
+	}
+
+	// Blank text box verify and validatation
+
+	@When("As user give blank {string} and valid {string}")
+	public void as_user_give_blank_and_valid(String string, String string2) {
+		// Write code here that turns the phrase above into concrete actions
+
+		System.out.println("username ");
 	}
 
 	@Then("close the webpage")
