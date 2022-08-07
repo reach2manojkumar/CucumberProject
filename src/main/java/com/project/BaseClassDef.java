@@ -17,16 +17,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseClassDef {
 
 	// declare ThreadLocal for Global Declare
-	public static ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<>();
-
-	// instance varible
-	public static Properties prop;
-
-	public static WebDriver getDriver() {
-
-		// Get from ThreadLocal
-		return driver.get();
-	}
+	public static WebDriver driver;
+	Properties prop;
 
 	public void setConfig() {
 		// TODO Auto-generated method stub
@@ -48,37 +40,38 @@ public class BaseClassDef {
 
 	}
 
-	public void launchApp(String browserName) {
+	public void launchApp(String browserName,String url) {
 		// String browserName = prop.getProperty("browser");
 		if (browserName.equalsIgnoreCase("Chrome")) {
 			WebDriverManager.chromedriver().setup();
 			// Set Browser to ThreadLocalMap
-			driver.set(new ChromeDriver());
+			driver = new ChromeDriver();
 		} else if (browserName.equalsIgnoreCase("FireFox")) {
 			WebDriverManager.firefoxdriver().setup();
-			driver.set(new FirefoxDriver());
+			driver=new FirefoxDriver();
 		} else if (browserName.equalsIgnoreCase("IE")) {
 			WebDriverManager.iedriver().setup();
-			driver.set(new InternetExplorerDriver());
+			driver=new InternetExplorerDriver();
 		}
 		// Maximize the screen
-		getDriver().manage().window().maximize();
+		driver.manage().window().maximize();
 		// Delete all the cookies
-		getDriver().manage().deleteAllCookies();
+		driver.manage().deleteAllCookies();
 		// Implicit TimeOuts
-		getDriver().manage().timeouts()
+		driver.manage().timeouts()
 				.implicitlyWait(Duration.ofSeconds(Integer.parseInt(prop.getProperty("implicitWait"))));
 		// PageLoad TimeOuts
-		getDriver().manage().timeouts()
+		driver.manage().timeouts()
 				.pageLoadTimeout(Duration.ofSeconds(Integer.parseInt(prop.getProperty("implicitWait"))));
 
 		// Launching the URL
+		
 
 	}
 
-	public  static void driclose() {
+	public  void driclose() {
 		// TODO Auto-generated method stub
-		((WebDriver) driver).quit();
+		driver.close();
 
 	}
 

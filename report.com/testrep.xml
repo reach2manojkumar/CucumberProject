@@ -1,71 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="7" time="71.452">
-    <testcase classname="Validation the login functionlity" name="Validating with invalid username and valid password" time="8.365">
-        <system-out><![CDATA[Given Open the chrome as login page.........................................passed
-And verify whether loaded page is correct or not............................passed
-When As user give invalid "manoj506" and valid "Password"...................passed
-And Click the login botton..................................................passed
-Then Verify Warning text is present or not..................................passed
-And Check the whether it redirected to loginpage or not.....................passed
-And close the webpage.......................................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Validation the login functionlity" name="Validating with invalid username and valid password 2" time="8.58">
-        <system-out><![CDATA[Given Open the chrome as login page.........................................passed
-And verify whether loaded page is correct or not............................passed
-When As user give invalid "manojkumar506" and valid "Password"..............passed
-And Click the login botton..................................................passed
-Then Verify Warning text is present or not..................................passed
-And Check the whether it redirected to loginpage or not.....................passed
-And close the webpage.......................................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Validation the login functionlity" name="Validating with invalid username and valid password 3" time="6.419">
-        <system-out><![CDATA[Given Open the chrome as login page.........................................passed
-And verify whether loaded page is correct or not............................passed
-When As user give invalid "mano mar506" and valid "Password"................passed
-And Click the login botton..................................................passed
-Then Verify Warning text is present or not..................................passed
-And Check the whether it redirected to loginpage or not.....................passed
-And close the webpage.......................................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Validation the login functionlity" name="Validating with invalid username and valid password 4" time="6.818">
-        <system-out><![CDATA[Given Open the chrome as login page.........................................passed
-And verify whether loaded page is correct or not............................passed
-When As user give invalid "! 506" and valid "Password"......................passed
-And Click the login botton..................................................passed
-Then Verify Warning text is present or not..................................passed
-And Check the whether it redirected to loginpage or not.....................passed
-And close the webpage.......................................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Validation the login functionlity" name="Validating with invalid username and valid password 5" time="6.154">
-        <system-out><![CDATA[Given Open the chrome as login page.........................................passed
-And verify whether loaded page is correct or not............................passed
-When As user give invalid "! wew" and valid "Password"......................passed
-And Click the login botton..................................................passed
-Then Verify Warning text is present or not..................................passed
-And Check the whether it redirected to loginpage or not.....................passed
-And close the webpage.......................................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Validation the login functionlity" name="Validating with black username and valid password" time="21.359">
-        <system-out><![CDATA[Given Open the chrome as login page.........................................passed
-And verify whether loaded page is correct or not............................passed
-When As user give blank "<usernamelg>" and valid "".........................passed
-And Click the login botton..................................................passed
-Then Verify Warning text is present or not..................................passed
-And Check the whether it redirected to loginpage or not.....................passed
-And close the webpage.......................................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Validatiion the Logout Functionlity" name="Validatiion of logout in search page" time="13.447">
-        <system-out><![CDATA[Given Open the webpage in Hotel search page.................................passed
-And check whether it present in search page or not..........................passed
-When verify whether logout button is Display or not.........................passed
-Then Click the logout button................................................passed
-And verify the After logout is direct to home page..........................passed
-]]></system-out>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="18.586">
+    <testcase classname="FlipKart product search functionlity" name="Verify functionlity of search box" time="18.365">
+        <failure message="The scenario has pending or undefined step(s)" type="io.cucumber.java.PendingException"><![CDATA[Given Flipkart product home page............................................passed
+When As customer,i want to search the specific product......................pending
+And type text that want to search product...................................skipped
+]]></failure>
     </testcase>
 </testsuite>
