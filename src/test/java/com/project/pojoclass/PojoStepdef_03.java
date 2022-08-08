@@ -32,9 +32,19 @@ public class PojoStepdef_03 extends BaseClassDef{
 	@FindBy(className="s1Q9rs")
 	private WebElement eachtittleprod;
 
+	@FindBy(className="_30jeq3")
+	private List<WebElement> pricetag;
 
 	public List<WebElement> getTittleprod() {
 		return tittleprod;
+	}
+
+	public List<WebElement> getPricetag() {
+		return pricetag;
+	}
+
+	public void setPricetag(List<WebElement> pricetag) {
+		this.pricetag = pricetag;
 	}
 
 	public WebElement getEachtittleprod() {

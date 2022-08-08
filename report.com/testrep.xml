@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="18.586">
-    <testcase classname="FlipKart product search functionlity" name="Verify functionlity of search box" time="18.365">
-        <failure message="The scenario has pending or undefined step(s)" type="io.cucumber.java.PendingException"><![CDATA[Given Flipkart product home page............................................passed
-When As customer,i want to search the specific product......................pending
-And type text that want to search product...................................skipped
-]]></failure>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="18.75">
+    <testcase classname="FlipKart product search functionlity" name="Verify functionlity of search box" time="18.53">
+        <system-out><![CDATA[Given Flipkart product home page............................................passed
+When As customer,i want to search the specific product......................passed
+And type text that want to search product...................................passed
+]]></system-out>
     </testcase>
 </testsuite>
