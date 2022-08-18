@@ -137,9 +137,10 @@ public class StepDefinition_03 extends BaseClassDef {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		driver.get("https://www.flipkart.com/");
-//		Thread.sleep(5000);
+		Thread.sleep(5000);
 		WebElement loginclose = loco.getLoginclose();
 		loginclose.click();
+		Thread.sleep(5000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 	       js.executeScript("window.scrollBy(0,550)", "");
 	       Thread.sleep(5000);
