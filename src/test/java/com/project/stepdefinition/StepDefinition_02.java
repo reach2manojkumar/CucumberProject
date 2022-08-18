@@ -8,6 +8,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 
 import com.project.Action.ActionClassload;
 
@@ -82,6 +84,9 @@ public class StepDefinition_02 extends ActionClassload {
 		WebElement logoutpage = driver
 				.findElement(By.xpath("//td[contains(text(),\"You have successfully logged out. \")]"));
 		CheckCurrentURL(driver, "Logout");
+		
+		Actions action=new Actions(driver);
+		action.dragAndDropBy(logoutpage,50,20).build().perform();
 
 	}
 
