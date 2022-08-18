@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="28.948">
-    <testcase classname="FlipKart product search functionality" name="Check the scroll Down and Up functionality" time="28.717">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="28.834">
+    <testcase classname="FlipKart product search functionality" name="Check the scroll Down and Up functionality" time="28.554">
         <system-out><![CDATA[Given User  want to scroll Down and click...................................passed
 When user want to scroll up by using page up key............................passed
 Then verify whether login button is visible.................................passed
