@@ -1,6 +1,7 @@
 package com.project.runnerclass;
 
 import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 
 import io.cucumber.junit.Cucumber;
@@ -12,9 +13,15 @@ import report.com.test.ReportGeneration;
 
 		plugin = { "pretty", "html:report.com/HtmpReport", 
 				"junit:report.com/testrep.xml",
-				"json:report.com/reporttest.json" })
+				"json:report.com/reporttest.json" }, tags="@drop")
 public class TestRunner {
-
+@BeforeClass
+public static void beforeLoad() {
+	
+	
+	
+	
+}
 	@AfterClass
 	public static void afterReport() {
 		// TODO Auto-generated method stub

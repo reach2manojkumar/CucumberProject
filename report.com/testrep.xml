@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="18.75">
-    <testcase classname="FlipKart product search functionlity" name="Verify functionlity of search box" time="18.53">
-        <system-out><![CDATA[Given Flipkart product home page............................................passed
-When As customer,i want to search the specific product......................passed
-And type text that want to search product...................................passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="21.434">
+    <testcase classname="FlipKart product search functionality" name="Check the scroll Down and Up functionality" time="20.893">
+        <system-out><![CDATA[Given User  want to scroll Down and click...................................passed
+When user want to scroll up by using page up key............................passed
+Then verify whether login button is visible.................................passed
 ]]></system-out>
     </testcase>
 </testsuite>

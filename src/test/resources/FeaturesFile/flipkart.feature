@@ -17,11 +17,29 @@
 ## (Comments)
 #Sample Feature Definition Template
 
-Feature: FlipKart product search functionlity
+Feature: FlipKart product search functionality
   Verify functionlity of searching all the  product satisfying the search
 
-  
-  Scenario: Verify functionlity of search box
+ 
+  Scenario: Verify functionality of search box
     Given Flipkart product home page
     When As customer,i want to search the specific product
     And type text that want to search product
+    
+    
+
+ Scenario: Verify the search box Dropdown 
+ 		Given Flipkart product home page
+ 		When As customer,i want to search "<searchname>" the specific product
+ 		Then Validation "<searchname>" the Dropdown Suggestion
+ 		
+ 		Examples:
+							|searchname|
+ 							|shoes|
+ 							|mobile|
+ 							|plant|
+ 	@drop						
+ Scenario: Check the scroll Down and Up functionality 		
+ 		Given User  want to scroll Down and click
+ 		When user want to scroll up by using page up key
+ 		Then verify whether login button is visible

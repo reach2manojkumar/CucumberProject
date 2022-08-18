@@ -11,28 +11,28 @@ import org.openqa.selenium.support.PageFactory;
 import com.project.BaseClassDef;
 import com.project.Action.ActionClassload;
 
-public class PojoStepdef_03 extends BaseClassDef{
+public class PojoStepdef_03 extends BaseClassDef {
 
 	public PojoStepdef_03() {
-		PageFactory.initElements(driver,this);
+		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath="//input[@placeholder=contains(text(),Search)]")
+	@FindBy(xpath = "//input[@placeholder=contains(text(),Search)]")
 	private WebElement searchtextbox;
-	
-	@FindBy(className ="_4ddWXP")
+
+	@FindBy(xpath = "//*[@id=\"container\"]/div/div[3]/div[1]/div[2]/div")
 	private List<WebElement> listProduct;
-	
-	@FindBy(xpath="//button[text()='✕']")
+
+	@FindBy(xpath = "//button[text()='✕']")
 	private WebElement loginclose;
-	
-	@FindBy(className="s1Q9rs")
+
+	@FindBy(className= "_4rR01T")
 	private List<WebElement> tittleprod;
-	
-	@FindBy(className="s1Q9rs")
+
+	@FindBy(className = "s1Q9rs")
 	private WebElement eachtittleprod;
 
-	@FindBy(className="_30jeq3")
+	@FindBy(className = "_30jeq3")
 	private List<WebElement> pricetag;
 
 	public List<WebElement> getTittleprod() {
@@ -62,6 +62,5 @@ public class PojoStepdef_03 extends BaseClassDef{
 	public List<WebElement> getListProduct() {
 		return listProduct;
 	}
-
 
 }
