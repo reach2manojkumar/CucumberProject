@@ -165,7 +165,7 @@ public class StepDefinition_03 extends BaseClassDef {
 	@Then("verify whether login button is visible")
 	public void verify_whether_login_button_is_visible() {
 		// Write code here that turns the phrase above into concrete actions
-		boolean dis = driver.findElement(By.className("exehdJ")).isDisplayed();
+		boolean dis = driver.findElement(By.xpath("//a[text()=\"Login\"]")).isDisplayed();
 		System.out.println(dis);
 //	    throw new io.cucumber.java.PendingException();
 	}
