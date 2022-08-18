@@ -13,7 +13,7 @@ import report.com.test.ReportGeneration;
 
 		plugin = { "pretty", "html:report.com/HtmpReport", 
 				"junit:report.com/testrep.xml",
-				"json:report.com/reporttest.json" }, tags="@drop")
+				"json:report.com/reporttest.json" }, tags="@drop", publish = true)
 public class TestRunner {
 @BeforeClass
 public static void beforeLoad() {
