@@ -23,7 +23,7 @@ public class PojoStepdef_03 extends BaseClassDef {
 	@FindBy(xpath = "//*[@id=\"container\"]/div/div[3]/div[1]/div[2]/div")
 	private List<WebElement> listProduct;
 
-	@FindBy(xpath = "//button[text()='X']")
+	@FindBy(xpath = "//button[text()='✕']")
 	private WebElement loginclose;
 
 	@FindBy(className= "_4rR01T")
