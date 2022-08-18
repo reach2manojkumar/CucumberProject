@@ -9,19 +9,13 @@ import io.cucumber.junit.CucumberOptions;
 import report.com.test.ReportGeneration;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources/FeaturesFile/flipkart.feature", glue = "com.project.stepdefinition", monochrome =true, dryRun = false,
+@CucumberOptions(features = "src/test/resources/FeaturesFile", glue = "com.project.stepdefinition", monochrome =true, dryRun = false,
 
 		plugin = { "pretty", "html:report.com/HtmpReport", 
 				"junit:report.com/testrep.xml",
 				"json:report.com/reporttest.json" }, tags="@drop", publish = true)
 public class TestRunner {
-@BeforeClass
-public static void beforeLoad() {
-	
-	
-	
-	
-}
+
 	@AfterClass
 	public static void afterReport() {
 		// TODO Auto-generated method stub
