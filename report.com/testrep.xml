@@ -1,6 +1,66 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="28.727">
-    <testcase classname="FlipKart product search functionality" name="Check the scroll Down and Up functionality" time="28.463">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="7" time="103.215">
+    <testcase classname="Validation the login functionlity" name="Validating with invalid username and valid password" time="11.207">
+        <system-out><![CDATA[Given Open the chrome as login page.........................................passed
+And verify whether loaded page is correct or not............................passed
+When As user give invalid "manoj506" and valid "Password"...................passed
+And Click the login botton..................................................passed
+Then Verify Warning text is present or not..................................passed
+And Check the whether it redirected to loginpage or not.....................passed
+And close the webpage.......................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Validation the login functionlity" name="Validating with invalid username and valid password 2" time="11.259">
+        <system-out><![CDATA[Given Open the chrome as login page.........................................passed
+And verify whether loaded page is correct or not............................passed
+When As user give invalid "manojkumar506" and valid "Password"..............passed
+And Click the login botton..................................................passed
+Then Verify Warning text is present or not..................................passed
+And Check the whether it redirected to loginpage or not.....................passed
+And close the webpage.......................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Validation the login functionlity" name="Validating with invalid username and valid password 3" time="9.654">
+        <system-out><![CDATA[Given Open the chrome as login page.........................................passed
+And verify whether loaded page is correct or not............................passed
+When As user give invalid "mano mar506" and valid "Password"................passed
+And Click the login botton..................................................passed
+Then Verify Warning text is present or not..................................passed
+And Check the whether it redirected to loginpage or not.....................passed
+And close the webpage.......................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Validation the login functionlity" name="Validating with invalid username and valid password 4" time="9.407">
+        <system-out><![CDATA[Given Open the chrome as login page.........................................passed
+And verify whether loaded page is correct or not............................passed
+When As user give invalid "! 506" and valid "Password"......................passed
+And Click the login botton..................................................passed
+Then Verify Warning text is present or not..................................passed
+And Check the whether it redirected to loginpage or not.....................passed
+And close the webpage.......................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Validation the login functionlity" name="Validating with invalid username and valid password 5" time="9.5">
+        <system-out><![CDATA[Given Open the chrome as login page.........................................passed
+And verify whether loaded page is correct or not............................passed
+When As user give invalid "! wew" and valid "Password"......................passed
+And Click the login botton..................................................passed
+Then Verify Warning text is present or not..................................passed
+And Check the whether it redirected to loginpage or not.....................passed
+And close the webpage.......................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Validation the login functionlity" name="Validating with black username and valid password" time="23.855">
+        <system-out><![CDATA[Given Open the chrome as login page.........................................passed
+And verify whether loaded page is correct or not............................passed
+When As user give blank "<usernamelg>" and valid "".........................passed
+And Click the login botton..................................................passed
+Then Verify Warning text is present or not..................................passed
+And Check the whether it redirected to loginpage or not.....................passed
+And close the webpage.......................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="FlipKart product search functionality" name="Check the scroll Down and Up functionality" time="27.858">
         <system-out><![CDATA[Given User  want to scroll Down and click...................................passed
 When user want to scroll up by using page up key............................passed
 Then verify whether login button is visible.................................passed
