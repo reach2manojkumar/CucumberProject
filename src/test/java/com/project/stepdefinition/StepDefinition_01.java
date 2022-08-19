@@ -126,7 +126,7 @@ public class StepDefinition_01 extends BaseClassDef {
 
 	@Then("close the webpage")
 	public void close_the_webpage() {
-		driver.quit();
+//		driver.quit();
 	}
 
 }

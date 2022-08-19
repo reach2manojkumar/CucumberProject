@@ -40,13 +40,9 @@ public class Hooks extends BaseClassDef {
 				if(failscreen!=null) {
 					shot.attach(failscreen, "image/png",shot.getName());
 				}}
-			else  {
-				byte[] passscreen=((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-				if(passscreen!=null) {
-					shot.attach(passscreen, "image/png",shot.getName());
-			}
+			
 				
 				
 			}
 		}
-	}
+	
